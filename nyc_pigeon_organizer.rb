@@ -17,21 +17,21 @@ pigeon_data = {
           "City Hall" => ["Andrew"]
         }
       }
-# # def nyc_pigeon_organizer(data)
-# #   data.each_with_object({}) do |(key, values), result|
-# #     values.each do |attributes, names|
-# #       names.each do |name|
-# #         if result[name] == nil
-# #           result[name] = {}
-# #         end
-# #         if !result[name][key]
-# #           !result[name][key] = []
-# #         end
-# #         result[name][key].push(attributes.to_s)
-# #       end
-# #     end
-# #   end
-# # end
+def nyc_pigeon_organizer(data)
+  data.each_with_object({}) do |(key, values), result|
+    values.each do |attributes, names|
+      names.each do |name|
+        if result[name] == nil
+          result[name] = {}
+        end
+        if !result[name][key]
+          !result[name][key] = []
+        end
+        result[name][key].push(attributes.to_s)
+      end
+    end
+  end
+end
  
 
 
